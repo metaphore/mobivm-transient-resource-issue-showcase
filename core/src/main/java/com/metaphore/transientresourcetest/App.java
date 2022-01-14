@@ -12,7 +12,6 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import com.crashinvaders.vfx.VfxManager;
 import com.crashinvaders.vfx.effects.GaussianBlurEffect;
 
-/** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class App extends ApplicationAdapter {
 	private static final Color CLEAR_COLOR = new Color(0.25f, 0.25f, 0.35f, 1f);
 
@@ -40,7 +39,6 @@ public class App extends ApplicationAdapter {
 	public void resize(int width, int height) {
 		viewport.update(width, height, true);
 		batch.setProjectionMatrix(viewport.getCamera().projection);
-//		batch.getProjectionMatrix().setToOrtho2D(0f, 0f, width, height);
 
 		vfxManager.resize(
 				Math.round(viewport.getWorldWidth()),
